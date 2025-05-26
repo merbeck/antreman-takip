@@ -1,3 +1,4 @@
+
 import streamlit as st
 
 st.set_page_config(page_title="FitTakip", layout="wide")
@@ -21,3 +22,25 @@ else:
     if st.sidebar.button("Çıkış"):
         st.session_state.oturum = False
         st.rerun()
+
+    sayfa = st.sidebar.selectbox("Sayfa Seçin", [
+        "Diyet Takibi",
+        "Egzersiz Takibi",
+        "Vücut Ölçüm Takibi",
+        "Haftalık Plan",
+        "Haftalık Diyet Analizi",
+        "Veriler Dışa Aktarımı"
+    ])
+
+    if sayfa == "Diyet Takibi":
+        import diyet_takibi
+    elif sayfa == "Egzersiz Takibi":
+        import egzersiz_takibi
+    elif sayfa == "Vücut Ölçüm Takibi":
+        import olcum_takibi
+    elif sayfa == "Haftalık Plan":
+        import plan_takvimi
+    elif sayfa == "Haftalık Diyet Analizi":
+        import diyet_analizi
+    elif sayfa == "Veriler Dışa Aktarımı":
+        import veri_aktarimi
