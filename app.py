@@ -1,5 +1,11 @@
 
 import streamlit as st
+import diyet_takibi
+import egzersiz_takibi
+import olcum_takibi
+import plan_takvimi
+import diyet_analizi
+import veri_aktarimi
 
 st.set_page_config(page_title="FitTakip", layout="wide")
 
@@ -33,14 +39,14 @@ else:
     ])
 
     if sayfa == "Diyet Takibi":
-        import diyet_takibi
+        diyet_takibi.run()
     elif sayfa == "Egzersiz Takibi":
-        import egzersiz_takibi
+        egzersiz_takibi.run()
     elif sayfa == "Vücut Ölçüm Takibi":
-        import olcum_takibi
+        olcum_takibi.run()
     elif sayfa == "Haftalık Plan":
-        import plan_takvimi
+        plan_takvimi.run()
     elif sayfa == "Haftalık Diyet Analizi":
-        import diyet_analizi
+        diyet_analizi.run()
     elif sayfa == "Veriler Dışa Aktarımı":
-        import veri_aktarimi
+        veri_aktarimi.run()

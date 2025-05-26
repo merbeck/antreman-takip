@@ -1,4 +1,7 @@
 import streamlit as st
 
-st.title('📏 Vücut Ölçüm Takibi')
-st.write('Boy, kilo, yağ oranı vb.')
+def run():
+    import streamlit as st
+    
+    st.title('📏 Vücut Ölçüm Takibi')
+    st.write('Boy, kilo, yağ oranı vb.')
