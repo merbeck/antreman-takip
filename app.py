@@ -12,7 +12,7 @@ if not st.session_state.oturum:
     if st.sidebar.button("Giriş"):
         if kullanici == "admin" and sifre == "1234":
             st.session_state.oturum = True
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.sidebar.error("Hatalı giriş.")
     st.stop()
@@ -20,4 +20,4 @@ else:
     st.sidebar.success("Giriş yapıldı")
     if st.sidebar.button("Çıkış"):
         st.session_state.oturum = False
-        st.experimental_rerun()
+        st.rerun()
